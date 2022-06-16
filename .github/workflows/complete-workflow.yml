@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   build:
-    name: Run the SAST scan on the source code
+    name: Run unit SAST scan on the source code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
