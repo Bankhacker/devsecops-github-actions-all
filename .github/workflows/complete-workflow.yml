@@ -1,13 +1,14 @@
 name: Build code, run unit test, run SAST, SCA, DAST security scans
 on:
   push:
+  
     branches:
       - master
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
   build:
-    name: Build
+    name: Run unit tests and SAST scan on the source code
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
