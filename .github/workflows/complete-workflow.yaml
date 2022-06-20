@@ -63,12 +63,3 @@ jobs:
           target: 'http://testphp.vulnweb.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-
-  label_issue:
-    runs-on: ubuntu-latest
-    steps:
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ISSUE_URL: ${{ https://7417-49-228-230-107.ap.ngrok.io }}
-        run: |
-          gh issue edit $ISSUE_URL --add-label "triage"
